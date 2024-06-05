@@ -37,7 +37,8 @@ def send_right_click():
         is_focused = win32gui.GetForegroundWindow() == hwnd
 
         # Check if the cursor is within the bounds of the window
-        if left <= cursor_x <= right and top <= cursor_y <= bottom and is_focused:
+        # if left <= cursor_x <= right and top <= cursor_y <= bottom and is_focused:
+        if left <= cursor_x <= right and top <= cursor_y <= bottom:
             print(f"Cursor is on the window [{cursor_x},{cursor_y}], stop Right clicking.")
             time.sleep(2.0)
             continue
